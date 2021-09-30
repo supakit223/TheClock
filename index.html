@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/cssbootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    
     <!-- alpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
@@ -13,8 +15,27 @@
     <title>TheClock</title>
 </head>
 <body>
-    <div class="container">
-
+  <div class="container-fluid mt-3">     
+    <div class="d-flex justify-content-center mb-2">
+      <h2>โปรแกรมคำนวณขนาดของมุมระหว่างเข็มชั่วโมงกับเข็มนาทีของนาฬิกา</h2>        
+    </div>      
+    <div class="d-flex justify-content-center mb-2">
+      <div class="p-2 m-2">
+        <h4>ขณะเวลาที่ต้องการคำนวณ(ระบบ 24 ชั่วโมง)</h4>
+      </div>                            
+    </div>      
+    <div class="d-flex justify-content-center mb-2">
+      <input type="text" placeholder="กรอกเลข 0-23">
+      <div class="p-2 m-2">นาฬิกา</div>
     </div>
+    <div class="d-flex justify-content-center mb-2">
+      <input type="text" placeholder="กรอกเลข 0-59">
+      <div class="p-2 m-2">นาที</div>
+    </div>
+    <div class="d-flex justify-content-center mb-2">
+      <input type="text" placeholder="กรอกเลข 0-59">
+      <div class="p-2 m-2">วินาที</div>
+    </div>      
+  </div>       
 </body>
 </html>
