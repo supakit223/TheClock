@@ -7,7 +7,7 @@
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
     <!-- alpine.js -->    
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,23 +26,23 @@
             </div>
             <div class="mt-3 row">
                 <div class="mt-1 d-flex col-lg-4">                     
-                    <input id="hour" min="0" max="23" required class="input mx-2" type="number" placeholder="กรอกจำนวนนับ 0-23">                       
-                    <small id="alertHour" class="text-danger"></small>
-                    <label class="mx-2">นาฬิกา</label><br>                      
-                </div>                                
+                    <input id="hour" min="0" max="23" required class="mx-2 input" type="number" placeholder="กรอกจำนวนนับ 0-23">
+                    <small id="alertHour" class="text-danger"></small>                                                            
+                    <label class="mx-2">นาฬิกา</label><br>                                        
+                </div>                                                
                 <div class="mt-1 d-flex col-lg-4">
-                    <input id="minute" min="0" max="59" required class="input mx-2" type="number" placeholder="กรอกจำนวนนับ 0-59">
+                    <input id="minute" min="0" max="59" required class="mx-2 input" type="number" placeholder="กรอกจำนวนนับ 0-59">
                     <small id="alertMinute" class="text-danger"></small>
                     <label class="mx-2">นาที</label><br>                    
                 </div>
                 <div class="mt-1 d-flex col-lg-4">
-                    <input id="second" min="0" max="59" required class="input mx-2" type="number" placeholder="กรอกจำนวนนับ 0-59">
+                    <input id="second" min="0" max="59" required class="mx-2 input" type="number" placeholder="กรอกจำนวนนับ 0-59">
                     <small id="alertSecond" class="text-danger"></small>
                     <label class="mx-2">วินาที</label><br>                    
                 </div>
             </div>
             <div class="my-3 d-flex justify-content-center">
-                <button class="mx-1 btn btn-success" onclick="validation()">คำนวณ</button>
+                <button class="mx-1 btn btn-success" onclick="validate_cal()">คำนวณ</button>
                 <button class="mx-1 btn btn-danger" onclick="location.reload()">ล้างข้อมูลทั้งหมด</button>
             </div>
         </form>
