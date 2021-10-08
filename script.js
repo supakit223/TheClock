@@ -29,7 +29,11 @@ function validate_cal() {
     document.getElementById("showResult2").innerHTML = degreeComplete
     document.getElementById("showResult3").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"
   } 
-} 
+}
+
+function reset_page() {
+  setTimeout(function(){location.reload()}, 100)
+}
 
 function convertDegree(number) {
   const degree = Math.floor(number) //องศา
