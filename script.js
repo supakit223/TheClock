@@ -33,6 +33,6 @@ function convertDegree(number) {
   const num2 = num1*60 - lipda //เลขทศนิยม
 
   const philipda = Math.floor(num2*60) //ฟิลิปดา
-  return `เข็มชั่วโมงและเข็มนาทีทำมุมกันมีขนาด ${degree}องศา ${lipda}ลิปดา ${philipda}ฟิลิปดา`
+  return `เข็มชั่วโมงและเข็มนาทีทำมุมกันมีขนาด ${degree} องศา ${lipda} ลิปดา ${philipda} ฟิลิปดา`
 }
 
