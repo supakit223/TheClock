@@ -3,6 +3,7 @@ function validate_cal() {
   const minute = document.getElementById("minute")
   const second = document.getElementById("second")
   const hourShow = hour.value  
+  let hourcal = hour.value
 
   if (!hour.checkValidity()) {
     document.getElementById("alertHour").innerHTML = hour.validationMessage
@@ -14,11 +15,16 @@ function validate_cal() {
     document.getElementById("alertSecond").innerHTML = second.validationMessage
   } 
   if (hour.checkValidity() && minute.checkValidity() && second.checkValidity()) {   
-    if (hour.value > 12) {
-      hour.value = hour.value - 12
+    if (hourcal > 12) {
+      hourcal = hourcal - 12
     }
-    const degreeDouble = Math.abs(30*hour.value-5.5*minute.value-0.09166*second.value)
-    const degreeComplete = convertDegree(degreeDouble)
+    let degreeDouble = Math.abs(30*hourcal-5.5*minute.value-0.09166*second.value)
+    if (degreeDouble > 180) {
+      degreeComplete = convertDegree(360 - degreeDouble)
+    }else{
+      degreeComplete = convertDegree(degreeDouble)
+    }
+    
     document.getElementById("showResult1").innerHTML = `ขณะเวลา ${hourShow} นาฬิกา ${minute.value} นาที ${second.value} วินาที`
     document.getElementById("showResult2").innerHTML = degreeComplete
     document.getElementById("showResult3").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"
