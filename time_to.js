@@ -28,6 +28,10 @@ function validate_cal() {
     document.getElementById("showResult1").innerHTML = `ขณะเวลา ${hourShow} นาฬิกา ${minute.value} นาที ${second.value} วินาที`
     document.getElementById("showResult2").innerHTML = degreeComplete
     document.getElementById("showResult3").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"
+
+    document.getElementById("showResult1").classList.add("yellow")
+    document.getElementById("showResult2").classList.add("green")
+    document.getElementById("showResult3").classList.add("blue")
   } 
 }
 

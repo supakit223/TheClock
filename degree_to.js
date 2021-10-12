@@ -13,7 +13,8 @@ function validate_cal2() {
         document.getElementById("alertPhilipda").innerHTML = philipda.validationMessage
     } 
     if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity()) {   
-        // document.getElementById("showResult1").innerHTML = `เวลาที่เข็มชั่วโมงกับเข็มนาทีทำมุมกันมีขนาด ${ongsa.value} องศา ${lipda.value} ลิปดา ${philipda.value} ฟิลิปดา คือ` 
+        document.getElementById("showResult1").innerHTML = `เวลาที่เข็มชั่วโมงกับเข็มนาทีทำมุมกันมีขนาด ${ongsa.value} องศา ${lipda.value} ลิปดา ${philipda.value} ฟิลิปดา คือ` 
+        
         let ongsaValue = parseInt(ongsa.value)
         let lipdaValue = parseInt(lipda.value)
         let philipdaValue = parseInt(philipda.value)
