@@ -47,11 +47,11 @@ function convertDegree(number) {
   const philipda = Math.floor(num2*60) //ฟิลิปดา
   return `เข็มชั่วโมงและเข็มนาทีทำมุมกันมีขนาด ${degree} องศา ${lipda} ลิปดา ${philipda} ฟิลิปดา`
 }
-// function reset_page() {
-//   setTimeout(function(){location.reload()}, 100)
-// }
 function reset_page() {
-  document.getElementById("showResult").classList.remove("visible")
-  document.getElementById("showResult").classList.add("invisible")  
+  setTimeout(function(){location.reload()}, 100)
 }
+// function reset_page() {
+//   document.getElementById("showResult").classList.remove("visible")
+//   document.getElementById("showResult").classList.add("invisible")  
+// }
 

@@ -2,6 +2,7 @@ function validate_cal2() {
     const ongsa = document.getElementById("ongsa")
     const lipda = document.getElementById("lipda")
     const philipda = document.getElementById("philipda")    
+    const error = document.getElementById("error")    
   
     if (!ongsa.checkValidity()) {
         document.getElementById("alertDegree").innerHTML = ongsa.validationMessage
@@ -12,7 +13,10 @@ function validate_cal2() {
     if (!philipda.checkValidity()) {
         document.getElementById("alertPhilipda").innerHTML = philipda.validationMessage
     } 
-    if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity()) {   
+    if (!error.checkValidity()) {
+        document.getElementById("alertError").innerHTML = error.validationMessage
+    } 
+    if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity() && error.checkValidity()) {   
         document.getElementById("showResult1").innerHTML = `เวลาที่เข็มชั่วโมงกับเข็มนาทีทำมุมกันมีขนาด ${ongsa.value} องศา ${lipda.value} ลิปดา ${philipda.value} ฟิลิปดา คือ` 
         
         let ongsaValue = parseInt(ongsa.value)
@@ -47,22 +51,16 @@ function validate_cal2() {
 
     document.getElementById('time').classList.remove("active")
     document.getElementById('time').classList.add("fade")
-    
+
     document.getElementById('degree').classList.remove("fade")        
     document.getElementById('degree').classList.add("active")
 
     document.getElementById('nav-link1').classList.remove("active")     
     document.getElementById('nav-link2').classList.add("active")  
-  }
-//   function reset_page2() {
-//     document.getElementById('time').classList.remove("active")
-//     document.getElementById('degree').classList.remove("fade")
-//     document.getElementById('time').classList.add("fade")    
-//     document.getElementById('degree').classList.add("active")
 
-//     document.getElementById('nav-link1').classList.remove("active")     
-//     document.getElementById('nav-link2').classList.add("active")     
-    
+    setTimeout(function(){location.reload()}, 100)
+  }
+//   function reset_page2() {    
 //     setTimeout(function(){location.reload()}, 100)
 //   }
   

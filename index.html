@@ -100,6 +100,17 @@
                             <label class="mx-2">ฟิลิปดา</label><br>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center align-content-center">
+                        <div class="mt-1 d-flex col-lg-4">
+                            <label class="mx-2">ช่วงคลาดเคลื่อน(+ -)</label>
+                            <input id="error" min="0" max="59" required class="mx-2 inputError" type="number">                            
+                            <label class="mx-2">ฟิลิปดา</label><br>
+                        </div><br>                        
+                    </div>
+                    <!-- ShowError -->
+                    <div class="d-flex justify-content-center align-content-center">
+                        <small id="alertError" class="text-danger"></small>
+                    </div>
                     <div class="my-2 d-flex justify-content-center">
                         <button type="button" class="mx-1 btn btn-outline-success" onclick="validate_cal2()">คำนวณ</button>
                         <button type="button reset" class="mx-1 btn btn-outline-danger" onclick="reset_page2()">ล้างข้อมูลทั้งหมด</button>
