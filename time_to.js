@@ -53,5 +53,14 @@ function convertDegree(number) {
 function reset_page() {
   document.getElementById("showResult").classList.remove("visible")
   document.getElementById("showResult").classList.add("invisible")  
+
+  document.getElementById("time").classList.remove("fade")
+  document.getElementById("time").classList.add("active")
+
+  document.getElementById("degree").classList.remove("active")        
+  document.getElementById("degree").classList.add("fade")
+
+  document.getElementById("nav-link2").classList.remove("active")  
+  document.getElementById("nav-link1").classList.add("active")      
 }
 

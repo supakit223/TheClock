@@ -19,6 +19,8 @@ function validate_cal2() {
     if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity() && error.checkValidity()) {           
         document.getElementById("showResult_degreeTo").classList.remove("invisible")
         document.getElementById("showResult_degreeTo").classList.add("visible")
+        document.getElementById("showResult_degreeTo3").classList.remove("invisible")
+        document.getElementById("showResult_degreeTo3").classList.add("visible")
 
         document.getElementById("showResult_degreeTo1").classList.add("yellow")
         document.getElementById("showResult_degreeTo2").classList.add("purple")
@@ -35,19 +37,25 @@ function validate_cal2() {
 
         let show1 = ""   
         let show2 = ""   
+        let count = 0
         for (let i = 0; i < 12; i++) {
             for (let j = 0; j < 60; j++) {
                 for (let k = 0; k < 60; k++) {      
                     let degree2 = Math.abs(30*i-5.5*j-0.09166*k)                     
                     if (Math.abs(degree1-degree2) <= errorValue/3600) { 
+                        count++
                         show1 = show1 + `${i} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree2)}<br><hr>`                                               
                         show2 = show2 + `${i+12} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree2)}<br><hr>`                                               
                         document.getElementById("showResult_degreeTo2").innerHTML = show1                        
-                        document.getElementById("showResult_degreeTo3").innerHTML = show2                       
-                    }                       
+                        document.getElementById("showResult_degreeTo3").innerHTML = show2                          
+                    }            
                 }                
             }            
         }  
+        if (count == 0) {
+            document.getElementById("showResult_degreeTo2").innerHTML = "ไม่มีเวลาที่สอดคล้อง"
+            document.getElementById("showResult_degreeTo3").classList.add("invisible")
+        }
         document.getElementById("showResult_degreeTo4").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"    
     } 
   }  
