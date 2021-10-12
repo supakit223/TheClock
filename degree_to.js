@@ -41,17 +41,30 @@ function validate_cal2() {
         }      
     } 
   }  
-  function reset_page2() {
+  function reset_page2(){
+    document.getElementById("showResult").classList.remove("visible")
+    document.getElementById("showResult").classList.add("invisible")  
+
     document.getElementById('time').classList.remove("active")
-    document.getElementById('degree').classList.remove("fade")
-    document.getElementById('time').classList.add("fade")    
+    document.getElementById('time').classList.add("fade")
+    
+    document.getElementById('degree').classList.remove("fade")        
     document.getElementById('degree').classList.add("active")
 
     document.getElementById('nav-link1').classList.remove("active")     
-    document.getElementById('nav-link2').classList.add("active")     
-    
-    setTimeout(function(){location.reload()}, 100)
+    document.getElementById('nav-link2').classList.add("active")  
   }
+//   function reset_page2() {
+//     document.getElementById('time').classList.remove("active")
+//     document.getElementById('degree').classList.remove("fade")
+//     document.getElementById('time').classList.add("fade")    
+//     document.getElementById('degree').classList.add("active")
+
+//     document.getElementById('nav-link1').classList.remove("active")     
+//     document.getElementById('nav-link2').classList.add("active")     
+    
+//     setTimeout(function(){location.reload()}, 100)
+//   }
   
 
   

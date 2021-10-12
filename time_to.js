@@ -37,11 +37,6 @@ function validate_cal() {
     document.getElementById("showResult3").classList.add("blue")    
   } 
 }
-
-function reset_page() {
-  setTimeout(function(){location.reload()}, 100)
-}
-
 function convertDegree(number) {
   const degree = Math.floor(number) //องศา
   const num1 = number - degree //เลขทศนิยม
@@ -51,5 +46,12 @@ function convertDegree(number) {
 
   const philipda = Math.floor(num2*60) //ฟิลิปดา
   return `เข็มชั่วโมงและเข็มนาทีทำมุมกันมีขนาด ${degree} องศา ${lipda} ลิปดา ${philipda} ฟิลิปดา`
+}
+// function reset_page() {
+//   setTimeout(function(){location.reload()}, 100)
+// }
+function reset_page() {
+  document.getElementById("showResult").classList.remove("visible")
+  document.getElementById("showResult").classList.add("invisible")  
 }
 
