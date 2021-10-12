@@ -30,9 +30,6 @@ body{
 .input{
     width: 170px;
 }
-.input2{
-    width: 170px;
-}
 @media screen and (min-width:1025px) {
     .col-lg-4{
         justify-content: center;
