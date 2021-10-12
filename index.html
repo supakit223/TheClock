@@ -102,8 +102,8 @@
                     </div>
                     <div class="d-flex justify-content-center align-content-center">
                         <div class="mt-1 d-flex col-lg-4">
-                            <label class="mx-2">ช่วงคลาดเคลื่อน(+ -)</label>
-                            <input id="error" min="0" max="59" required class="mx-2 inputError" type="number">                            
+                            <label class="mx-2">ช่วงคลาดเคลื่อน(+,-)</label>
+                            <input id="error" min="0" max="59" required class="mx-2 inputError" type="number" placeholder="0-59">                            
                             <label class="mx-2">ฟิลิปดา</label><br>
                         </div><br>                        
                     </div>
@@ -116,18 +116,21 @@
                         <button type="button reset" class="mx-1 btn btn-outline-danger" onclick="reset_page2()">ล้างข้อมูลทั้งหมด</button>
                     </div>
                 </form>
-                <div id="showResult" class="mt-1 mb-1 p-1 lightblue invisible">
+                <div id="showResult_degreeTo" class="mt-1 mb-1 p-1 lightblue invisible">
                     <div class="mb-1 p-1 text-center">
-                        <label class="p-2" id="showResult1"></label>
+                        <label class="p-2" id="showResult_degreeTo1"></label>
                     </div>
                     <div class="mb-1 p-1 text-center text-white">
-                        <label class="p-2" id="showResult2"></label>
+                        <label class="p-2" id="showResult_degreeTo2"></label>
+                    </div>
+                    <div class="p-1 text-center text-white">
+                        <label class="p-2" id="showResult_degreeTo3"></label>
                     </div>
                     <div class="mb-1 p-1 text-center text-white">
-                        <label class="p-2" id="showResult3"></label>
+                        <label class="p-2" id="showResult_degreeTo4"></label>
                     </div>
                     <div class="text-center">
-                        <label id="showResult4">Dev.By TheBoySupakit</label>
+                        <label id="showResult_degreeTo5">Dev.By TheBoySupakit</label>
                     </div>
                 </div>
             </div>
