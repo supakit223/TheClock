@@ -37,6 +37,7 @@ function validate_cal() {
     document.getElementById("showResult3").classList.add("blue")    
   } 
 }
+
 function convertDegree(number) {
   const degree = Math.floor(number) //องศา
   const num1 = number - degree //เลขทศนิยม
