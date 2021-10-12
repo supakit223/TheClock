@@ -32,20 +32,25 @@ function validate_cal2() {
         let ongsaValue = parseInt(ongsa.value)
         let lipdaValue = parseInt(lipda.value)
         let philipdaValue = parseInt(philipda.value)
-        let errorValue = parseInt(error.value)        
-        let degree1 = ongsaValue+lipdaValue/60+philipdaValue/3600   
+        let errorValue = parseInt(error.value)             
 
+        let degree1 = ongsaValue+lipdaValue/60+philipdaValue/3600   
+        let degree2 = 360-ongsaValue+lipdaValue/60+philipdaValue/3600   
+        
         let show1 = ""   
         let show2 = ""   
         let count = 0
         for (let i = 0; i < 12; i++) {
             for (let j = 0; j < 60; j++) {
                 for (let k = 0; k < 60; k++) {      
-                    let degree2 = Math.abs(30*i-5.5*j-0.09166*k)                     
-                    if (Math.abs(degree1-degree2) <= errorValue/3600) { 
+                    let degree3 = Math.abs(30*i-5.5*j-0.09166*k)                     
+                    if (Math.abs(degree1-degree3) <= errorValue/3600 || Math.abs(degree2-degree3) <= errorValue/3600) { 
                         count++
-                        show1 = show1 + `${i} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree2)}<br><hr>`                                               
-                        show2 = show2 + `${i+12} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree2)}<br><hr>`                                               
+                        if (degree3 > 180) {
+                            degree3 = 360 - degree3
+                        }
+                        show1 = show1 + `${i} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree3)}<br><hr>`                                               
+                        show2 = show2 + `${i+12} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree3)}<br><hr>`                                               
                         document.getElementById("showResult_degreeTo2").innerHTML = show1                        
                         document.getElementById("showResult_degreeTo3").innerHTML = show2                          
                     }            
