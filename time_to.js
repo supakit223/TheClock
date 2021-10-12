@@ -33,7 +33,7 @@ function validate_cal() {
     document.getElementById("showResult").classList.add("visible")
 
     document.getElementById("showResult1").classList.add("yellow")
-    document.getElementById("showResult2").classList.add("green")
+    document.getElementById("showResult2").classList.add("purple")
     document.getElementById("showResult3").classList.add("blue")    
   } 
 }

@@ -18,11 +18,14 @@ body{
 .yellow{
     background-color: yellow;
 }
-.green{
-    background-color: green;
+.purple{
+    background-color: purple;
 }
 .blue{
     background-color: blue;
+}
+.skyblue{
+    background-color:skyblue;
 }
 .input{
     width: 170px;
