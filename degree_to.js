@@ -70,10 +70,7 @@ function validate_cal2() {
     const philipda = Math.floor(num2*60) //ฟิลิปดา
     return `เข็มชั่วโมงและเข็มนาทีทำมุมกันมีขนาด ${degree} องศา ${lipda} ลิปดา ${philipda} ฟิลิปดา`
   }
-  function reset_page2(){
-    document.getElementById("showResult").classList.remove("visible")
-    document.getElementById("showResult").classList.add("invisible")  
-
+  function reset_page2() {   
     document.getElementById("time").classList.remove("active")
     document.getElementById("time").classList.add("fade")
 
@@ -82,10 +79,22 @@ function validate_cal2() {
 
     document.getElementById("nav-link1").classList.remove("active")     
     document.getElementById("nav-link2").classList.add("active")  
-  }    
-//   function reset_page2() {    
-//     setTimeout(function(){location.reload()}, 100)
-//   }
+
+    setTimeout(function(){location.reload()}, 100)
+  }  
+//   function reset_page2(){
+//     document.getElementById("showResult").classList.remove("visible")
+//     document.getElementById("showResult").classList.add("invisible")  
+
+//     document.getElementById("time").classList.remove("active")
+//     document.getElementById("time").classList.add("fade")
+
+//     document.getElementById("degree").classList.remove("fade")        
+//     document.getElementById("degree").classList.add("active")
+
+//     document.getElementById("nav-link1").classList.remove("active")     
+//     document.getElementById("nav-link2").classList.add("active")  
+//   }    
   
 
   
