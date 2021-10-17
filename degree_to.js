@@ -50,13 +50,13 @@ function validate_cal2() {
                             degree3 = 360 - degree3
                         }
                         show1 = show1 + `${i} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree3)}<br><hr>`                                               
-                        show2 = show2 + `${i+12} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree3)}<br><hr>`                                               
-                        document.getElementById("showResult_degreeTo2").innerHTML = show1                        
-                        document.getElementById("showResult_degreeTo3").innerHTML = show2                          
+                        show2 = show2 + `${i+12} นาฬิกา ${j} นาที ${k} วินาที<br> โดย ${convertDegree(degree3)}<br><hr>`                                                 
                     }            
                 }                
             }            
-        }  
+        } 
+        document.getElementById("showResult_degreeTo2").innerHTML = show1                        
+        document.getElementById("showResult_degreeTo3").innerHTML = show2   
         if (count == 0) {
             document.getElementById("showResult_degreeTo2").innerHTML = "ไม่มีเวลาที่สอดคล้อง"
             document.getElementById("showResult_degreeTo3").classList.add("invisible")
