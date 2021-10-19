@@ -5,18 +5,39 @@ function validate_cal2() {
     const error = document.getElementById("error")    
   
     if (!ongsa.checkValidity()) {
-        document.getElementById("alertDegree").innerHTML = ongsa.validationMessage
-    } 
+        document.getElementById("alertDegree").innerHTML = ongsa.validationMessage        
+    }else{
+        document.getElementById("alertDegree").classList.remove("visible")
+        document.getElementById("alertDegree").classList.add("invisible")
+    }
     if (!lipda.checkValidity()) {
         document.getElementById("alertLipda").innerHTML = lipda.validationMessage
+    }else{
+        document.getElementById("alertLipda").classList.remove("visible")
+        document.getElementById("alertLipda").classList.add("invisible")
     } 
     if (!philipda.checkValidity()) {
         document.getElementById("alertPhilipda").innerHTML = philipda.validationMessage
-    } 
+    }else{
+        document.getElementById("alertPhilipda").classList.remove("visible")
+        document.getElementById("alertPhilipda").classList.add("invisible")
+    }
     if (!error.checkValidity()) {
         document.getElementById("alertError").innerHTML = error.validationMessage
-    } 
-    if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity() && error.checkValidity()) {           
+    }else {
+        document.getElementById("alertError").classList.remove("visible")
+        document.getElementById("alertError").classList.add("invisible")
+    }
+    if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity() && error.checkValidity()) {  
+        document.getElementById("alertDegree").classList.remove("visible")
+        document.getElementById("alertDegree").classList.add("invisible")
+        document.getElementById("alertLipda").classList.remove("visible")
+        document.getElementById("alertLipda").classList.add("invisible")
+        document.getElementById("alertPhilipda").classList.remove("visible")
+        document.getElementById("alertPhilipda").classList.add("invisible")
+        document.getElementById("alertError").classList.remove("visible")
+        document.getElementById("alertError").classList.add("invisible")
+        
         document.getElementById("showResult_degreeTo").classList.remove("invisible")
         document.getElementById("showResult_degreeTo").classList.add("visible")
         document.getElementById("showResult_degreeTo3").classList.remove("invisible")
@@ -62,6 +83,10 @@ function validate_cal2() {
             document.getElementById("showResult_degreeTo3").classList.add("invisible")
         }
         document.getElementById("showResult_degreeTo4").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"    
+    }
+    else{
+        document.getElementById("showResult_degreeTo").classList.remove("visible")
+        document.getElementById("showResult_degreeTo").classList.add("invisible")
     } 
   }  
 
