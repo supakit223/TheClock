@@ -27,10 +27,7 @@ body{
     background-color: blue;
     border-radius: 5px;
 }
-.lightblue{
-    background-color :lightblue; 
-    border-radius: 5px;   
-}
+
 .input{
     width: 260px;
     text-align: center;
@@ -43,6 +40,17 @@ body{
     padding: 5px; 
     margin-bottom: 3px;
     text-align: center;
+}
+.blackBorder{
+    background-color: lightblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 1px;   
+    padding: 5px; 
+    margin-bottom: 3px;
+    text-align: center;
+    font-weight: bold;
 }
 @media screen and (min-width:1025px) {
     .col-lg-4{

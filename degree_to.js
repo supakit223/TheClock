@@ -35,7 +35,7 @@ function validate_cal2() {
         document.getElementById("showResult_degreeTo3").classList.remove("invisible")
         document.getElementById("showResult_degreeTo3").classList.add("visible")
 
-        document.getElementById("showResult_degreeTo1").classList.add("yellow")
+        document.getElementById("showResult_degreeTo1").classList.add("blackBorder")
         document.getElementById("showResult_degreeTo2").classList.add("purple")
         document.getElementById("showResult_degreeTo3").classList.add("purple")
         document.getElementById("showResult_degreeTo4").classList.add("blue")    
