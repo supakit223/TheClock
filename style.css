@@ -31,6 +31,15 @@ body{
     width: 150px;
     text-align: center;
 }
+.boxOfBorder{
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-radius: 5px;
+    border-width: 1px;   
+    padding: 5px; 
+    margin-bottom: 3px;
+    text-align: center;
+}
 @media screen and (min-width:1025px) {
     .col-lg-4{
         justify-content: center;
