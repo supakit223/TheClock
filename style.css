@@ -17,15 +17,19 @@ body{
 }
 .yellow{
     background-color: yellow;
+    border-radius: 5px;
 }
 .purple{
     background-color: purple;
+    border-radius: 5px;
 }
 .blue{
     background-color: blue;
+    border-radius: 5px;
 }
 .lightblue{
-    background-color :lightblue;    
+    background-color :lightblue; 
+    border-radius: 5px;   
 }
 .input{
     width: 260px;
