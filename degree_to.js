@@ -7,36 +7,28 @@ function validate_cal2() {
     if (!ongsa.checkValidity()) {
         document.getElementById("alertDegree").innerHTML = ongsa.validationMessage        
     }else{
-        document.getElementById("alertDegree").classList.remove("visible")
-        document.getElementById("alertDegree").classList.add("invisible")
-    }
+        document.getElementById("alertDegree").innerHTML = ""
+    }        
     if (!lipda.checkValidity()) {
         document.getElementById("alertLipda").innerHTML = lipda.validationMessage
     }else{
-        document.getElementById("alertLipda").classList.remove("visible")
-        document.getElementById("alertLipda").classList.add("invisible")
-    } 
+        document.getElementById("alertLipda").innerHTML = "" 
+    }    
     if (!philipda.checkValidity()) {
         document.getElementById("alertPhilipda").innerHTML = philipda.validationMessage
     }else{
-        document.getElementById("alertPhilipda").classList.remove("visible")
-        document.getElementById("alertPhilipda").classList.add("invisible")
-    }
+        document.getElementById("alertPhilipda").innerHTML = ""
+    }     
     if (!error.checkValidity()) {
         document.getElementById("alertError").innerHTML = error.validationMessage
     }else {
-        document.getElementById("alertError").classList.remove("visible")
-        document.getElementById("alertError").classList.add("invisible")
+        document.getElementById("alertError").innerHTML = ""        
     }
     if (ongsa.checkValidity() && lipda.checkValidity() && philipda.checkValidity() && error.checkValidity()) {  
-        document.getElementById("alertDegree").classList.remove("visible")
-        document.getElementById("alertDegree").classList.add("invisible")
-        document.getElementById("alertLipda").classList.remove("visible")
-        document.getElementById("alertLipda").classList.add("invisible")
-        document.getElementById("alertPhilipda").classList.remove("visible")
-        document.getElementById("alertPhilipda").classList.add("invisible")
-        document.getElementById("alertError").classList.remove("visible")
-        document.getElementById("alertError").classList.add("invisible")
+        document.getElementById("alertDegree").innerHTML = "" 
+        document.getElementById("alertLipda").innerHTML = "" 
+        document.getElementById("alertPhilipda").innerHTML = ""
+        document.getElementById("alertError").innerHTML = ""
         
         document.getElementById("showResult_degreeTo").classList.remove("invisible")
         document.getElementById("showResult_degreeTo").classList.add("visible")

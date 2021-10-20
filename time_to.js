@@ -8,20 +8,17 @@ function validate_cal() {
   if (!hour.checkValidity()) {
     document.getElementById("alertHour").innerHTML = hour.validationMessage
   }else{
-    document.getElementById("alertHour").classList.remove("visible")
-    document.getElementById("alertHour").classList.add("invisible")
+    document.getElementById("alertHour").innerHTML = ""
   } 
   if (!minute.checkValidity()) {
     document.getElementById("alertMinute").innerHTML = minute.validationMessage
   }else{
-    document.getElementById("alertMinute").classList.remove("visible")
-    document.getElementById("alertMinute").classList.add("invisible")
+    document.getElementById("alertMinute").innerHTML = ""    
   } 
   if (!second.checkValidity()) {
     document.getElementById("alertSecond").innerHTML = second.validationMessage
   }else{
-    document.getElementById("alertSecond").classList.remove("visible")
-    document.getElementById("alertSecond").classList.add("invisible")      
+    document.getElementById("alertSecond").innerHTML = ""          
   } 
   if (hour.checkValidity() && minute.checkValidity() && second.checkValidity()) {   
     if (hourcal > 12) {
@@ -38,12 +35,9 @@ function validate_cal() {
     document.getElementById("showResult2").innerHTML = degreeComplete
     document.getElementById("showResult3").innerHTML = "หมายเหตุ : 1 องศา = 60 ลิปดา และ 1 ลิปดา = 60 ฟิลิปดา"
 
-    document.getElementById("alertHour").classList.remove("visible")
-    document.getElementById("alertHour").classList.add("invisible")
-    document.getElementById("alertMinute").classList.remove("visible")
-    document.getElementById("alertMinute").classList.add("invisible")
-    document.getElementById("alertSecond").classList.remove("visible")
-    document.getElementById("alertSecond").classList.add("invisible")        
+    document.getElementById("alertHour").innerHTML = ""  
+    document.getElementById("alertMinute").innerHTML = ""  
+    document.getElementById("alertSecond").innerHTML = ""  
 
     document.getElementById("showResult").classList.remove("invisible")
     document.getElementById("showResult").classList.add("visible")
